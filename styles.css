@@ -97,7 +97,7 @@ button > img {
   width: unset;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
   body {
     display: flex;
     justify-content: center;
