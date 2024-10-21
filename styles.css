@@ -20,8 +20,9 @@ body {
   border-radius: 1rem;
   align-items: stretch;
   justify-content: stretch;
+  padding: 0;
 }
-.card_preview img {
+.card_preview > img {
   width: 50%;
   height: auto;
   border-radius: 1rem 0 0 1rem;
@@ -29,10 +30,10 @@ body {
 
 .right_side {
   margin: 0;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 .spaced {
-  padding: 0.5rem 0 1rem 0;
+  padding: 0.5rem 0 0 0;
   font-size: 0.8rem;
   letter-spacing: 0.45rem;
   text-transform: uppercase;
@@ -43,14 +44,14 @@ body {
   font-weight: 700;
   font-size: 2.3rem;
   line-height: 2.4rem;
-  padding: 0 0 1rem 0;
+  padding: 1rem 0 0 0;
 }
 .right_side h2 {
   font-size: 0.85rem;
   font-weight: 600;
   color: rgb(87, 87, 87);
   line-height: 1.4rem;
-  padding: 0 0 0.5rem 0;
+  padding: 0.8rem 0 0 0;
 }
 .price_tag {
   display: flex;
@@ -58,28 +59,44 @@ body {
   font-family: Fraunces;
   font-weight: 700;
   font-size: 2rem;
-  padding: 0 0 0.5rem 0;
+  padding: 0.8rem 0 0 0;
 }
-.price_tag span {
+.price_tag > span {
   font-size: 0.8rem;
   color: rgb(87, 87, 87);
   text-decoration: line-through;
   padding: 1rem 1rem 1.2rem 1rem;
 }
-.btn button {
-  width: 14rem;
+button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 3rem;
   border: none;
   border-radius: 0.7rem;
+  margin: 1rem 0 0 0;
   background-color: rgb(9, 82, 7);
   font-size: 1rem;
   color: white;
+  gap: 10px;
 }
-.btn button img {
+
+button > span{
+  
+  margin: unset;
+  height: unset;
+  width: unset;
+}
+
+button > img {
   width: 2rem;
-  height: auto;
-  padding-right: 0.8rem;
+  
+  margin: unset;
+  height: unset;
+  width: unset;
 }
+
 @media only screen and (max-width: 480px) {
   body {
     display: flex;
@@ -93,28 +110,10 @@ body {
     width: 20rem;
     height: auto;
   }
-  .card_preview img {
+  .card_preview > img {
     width: 20rem; 
     height: 15rem; 
     border-radius: 1rem 1rem 0 0; 
     object-fit: cover;
-  }
-  .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn button {
-    width: 16rem;
-    height: 3rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-  }
-  .btn button img {
-    width: 2.7rem;
-    height: auto;
-    padding-left: 0.8rem;
-    padding-top: 0.2rem;
   }
 }
